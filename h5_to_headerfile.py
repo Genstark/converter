@@ -24,9 +24,11 @@ def hex_to_c_array(hex_data, var_name):
 
       if (i + 1) < len(hex_data):
           hex_str += ','
+        
       if (i + 1) % 12 == 0:
           hex_str += '\n '
-      hex_array.append(hex_str)
+      
+    hex_array.append(hex_str)
 
     c_str += '\n ' + format(' '.join(hex_array)) + '\n};\n\n'
 
